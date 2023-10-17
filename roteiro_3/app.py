@@ -23,4 +23,17 @@ with tab2:
     container_groceries.write(" ***Buy some Sensação***")
     container_groceries.write("Buy some Oatmeal")
 
+with tab4:
+    st.write("This is the Journal tab")
+    st.session_state.journals = []
+    with st.expander("Journal 1"):
+        text = st.text_input("Write your journal here")
+        save = st.button("Save")
+        if save:
+            st.session_state.journals.append(text)
+        for journal in st.session_state.journals:
+            st.write(journal)
+            # st.write("Your journal of the day: ", text)
+            st.image("https://media.giphy.com/media/26FfbEpKus6uPskM0/giphy.gif")
+
     
